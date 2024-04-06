@@ -1,0 +1,94 @@
+#main {
+    padding: 60 px;
+    margin: auto;
+    margin-top: 120px;
+    text-align: center;
+    width: 500;
+    height: 500;
+    font-family: 'Times New Roman', serif;
+}
+
+#contenido {
+    border-radius: 50px;
+    border-style: solid;
+    border-width: 4;
+    margin: 0 5px;
+    display: grid;
+    color: rgb(7, 7, 7);
+    background-color: rgb(234, 245, 244);
+    grid-template-columns: auto auto auto;
+    grid-gap: 10px;
+    border-radius: 50;
+    font-family: 'Times New Roman', serif;
+
+}
+.nay {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #faf7f7;
+}
+
+
+.naye {
+    background-image: url("https://static.vecteezy.com/system/resources/previews/015/448/923/original/seamless-background-with-blue-sky-and-white-cartoon-clouds-illustration-vector.jpg");
+}
+
+.nay {
+    background-color: rgb(68, 64, 64);
+    text-align: center;
+    color: rgb(248, 244, 248);
+    font-family: 'Times New Roman', serif;
+    height: 70px;
+    line-height: 60px; /* Centra el texto verticalmente */
+    position: relative;
+    overflow: hidden; /* Asegura que la sombra no se desborde del contenedor */
+}
+
+.nay::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: rgb(7, 208, 235);
+    filter: blur(70px);
+    transform: skewX(-40deg);
+    animation: luzDeslizante 3s infinite;
+}
+
+@keyframes luzDeslizante {
+    0% {
+        left: -150%; /* Empieza desde fuera del elemento */
+    }
+    50% {
+        left: 50%; /* Mueve la luz al centro del elemento */
+    }
+    100% {
+        left: 150%; /* La luz sale completamente del elemento */
+    }
+}
+
+#rick {
+    width: 30%; 
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 10px solid #ccc; 
+    border-radius: 20px; 
+    font-size: 16px;
+}
+.btn {
+    padding: 20px 30px;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    border-radius: 40px; /* Bordes redondeados */
+}
+
+.btn-info {
+    background-color: #323233; /* Color de fondo del botón */
+    color: white; /* Color del texto */
+}
